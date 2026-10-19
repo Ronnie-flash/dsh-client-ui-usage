@@ -1,0 +1,5 @@
+# 把插件行插入组合。列进 dsh.profile.bundles 时自动生效；
+# 若改用 profile 自己的 cordis.patch.yml 手动 insert，则不需要这一条。
+- insert:
+    - id: ui-usage
+      name: 'dsh-client-ui-usage'

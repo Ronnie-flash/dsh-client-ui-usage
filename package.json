@@ -1,0 +1,46 @@
+{
+  "name": "dsh-client-ui-usage",
+  "version": "0.2.0",
+  "description": "DSH 会话头部 Usage 面板：DeepSeek 余额查询（API key 直查）+ 本地用量统计（3×2 指标卡、53 周 Token 热力图、模型分布）。",
+  "type": "module",
+  "main": "lib/index.js",
+  "license": "MIT",
+  "author": "Ronnie-flash",
+  "keywords": [
+    "dsh",
+    "deepseek-harness",
+    "dsh-plugin",
+    "usage",
+    "token",
+    "heatmap",
+    "dashboard"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ronnie-flash/dsh-client-ui-usage.git"
+  },
+  "files": [
+    "lib",
+    "cordis.patch.yml",
+    "README.md",
+    "LICENSE"
+  ],
+  "exports": {
+    ".": {
+      "default": "./lib/index.js"
+    },
+    "./client": {
+      "default": "./lib/client.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "inject": [],
+      "platform": "web"
+    }
+  }
+}
