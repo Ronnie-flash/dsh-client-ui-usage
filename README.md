@@ -1,9 +1,24 @@
 # dsh-client-ui-usage
 
+简体中文 | [English](README.en.md)
+
 DSH（DeepSeek Harness）客户端插件：在会话头部放一个 **Usage** 按钮，点开是一个带两个 tab 的面板。
 
 - **余额** —— 用 DeepSeek API key 直查官方 `GET /user/balance`。密钥只在主进程读取，浏览器只调同源 `/usage-balance`；余额低于 `0.5` 时数字变红并带 ❗。
 - **用量统计** —— 扫描本地会话日志：3×2 指标卡 + 53 周 × 7 行 Token 热力图 + 概览/模型双 Tab + 全部 / 30 天 / 7 天范围切换 + 「你的 Token 用量相当于 N 本《了不起的盖茨比》」彩蛋。视觉对齐 Claude 的 Usage 页。
+
+## 截图
+
+> 数据为示例，非真实用量。
+
+**余额**：账户状态、余额（按币种）、充值与赠送明细，余额低于 0.5 时标红并出现 ❗。
+
+![余额面板](docs/usage-balance.png)
+
+**用量统计**：3×2 指标卡、53 周 Token 热力图（5 级色阶 + 少/多图例）、概览 / 模型 Tab、全部 / 30 天 / 7 天范围切换。
+
+![用量统计](docs/usage-stats.png)
+
 
 ## 安装
 
